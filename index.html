@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+
+    <style>
+        .imagem {
+            width: 150px;
+            height: auto;
+            transition: width 0.3s ease;
+        }
+
+        .imagem-pequena {
+            width: 100px; /* Reduzida */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>JOGO DA MEMÓRIA</h2>
+        <div class="game" id="game-board">
+        </div>
+        <button class="reset" onclick="window.location.reload()">RESET GAME</button>
+       
+       
+    </div>
+
+    <script src="./src/scripts/engine.js" defer></script>
+
+    <script>
+        function diminuirImagens() {
+            // Seleciona todas as imagens e alterna a classe "imagem-pequena"
+            const imagens = document.querySelectorAll(".imagem");
+            imagens.forEach(img => img.classList.toggle("imagem-pequena"));
+        }
+    </script>
+</body>
+</html>
+
+
+
